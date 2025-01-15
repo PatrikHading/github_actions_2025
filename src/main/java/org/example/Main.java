@@ -1,8 +1,13 @@
 package org.example;
 
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello Github Actions!!");
-        System.out.println("Test test test");
+
+        Random rand = new Random();
+
+        int randomNumber = rand.nextInt(1000);
+        System.out.println("Your number is: " + randomNumber);
     }
 }

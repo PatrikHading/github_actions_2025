@@ -19,3 +19,12 @@ jobs:
 
       - name: Build with Maven # Build project using Maven
         run: mvn -B package --file pom.xml
+
+      - name: Run program # Run the program
+        run : java -cp target/app-1.jar org.example.Main > out.txt
+
+      - name: Upload output # Upload artifact (output)
+        uses: actions/upload-artifact@v4
+        with:
+          path: 'out.txt'
+          name: 'random-number-output'
